@@ -1,0 +1,24 @@
+{
+  "name": "rh-table-expandable",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lit-labs/motion": "^1.0.7",
+    "@patternfly/pfe-core": "^3.0.0",
+    "@rhds/elements": "^1.4.5",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "rollup-plugin-cssimport": "^1.0.3",
+    "rollup-plugin-import-assert": "^3.0.1",
+    "rollup-plugin-import-css": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  }
+}
