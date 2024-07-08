@@ -1,2 +1,43 @@
 tr[expandable] {
+  --animation-speed: .3s;
+  /* animation: td-collapse 1s ease-out reverse; */
+  transition-property: border;
+  transition-duration: var(--animation-speed);
+}
+
+tr[hidden] {
+  display: table-row;
+  border-color: transparent;
+  border-width: 0px;
+}
+
+tr[expandable] > td {
+  overflow: hidden;
+  white-space: nowrap;
+  transition-property: padding, border;
+  transition-duration: var(--animation-speed);
+}
+
+tr[hidden] > td {
+  padding: 0px;
+  border: none;
+  transition-duration: calc(var(--animation-speed) * 2);
+}
+
+tr[hidden] > td * {
+  overflow: hidden;
+}
+
+tr [panel] {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows var(--animation-speed) ease-out;
+}
+
+tr[hidden] [panel] {
+  grid-template-rows: 0fr;
+}
+
+tr [panel-container] {
+  overflow: hidden;
 }

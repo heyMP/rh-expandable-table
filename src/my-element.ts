@@ -32,59 +32,59 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-    <rh-table>
-      <table>
-        <caption>
-          Concerts
-        </caption>
-        <colgroup>
-          <col>
-          <col>
-          <col>
-        </colgroup>
-        <thead>
-          <tr>
-            <th id="concerts-date" scope="col" data-label="Date">Date</th>
-            <th id="concerts-event" scope="col" data-label="Event">Event<rh-sort-button></rh-sort-button></th>
-            <th id="concerts-venue" scope="col" data-label="Venue">Venue<rh-sort-button></rh-sort-button></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr tabindex="0" aria-expanded="true" aria-controls="sub-panel" role="rowgroup">
-            <td headers="concerts-date" data-label="Date">12 February</td>
-            <td headers="concerts-event" data-label="Event">Waltz with Strauss</td>
-            <td headers="concerts-venue" data-label="Venue">Main Hall</td>
-          </tr>
-          <tr id="sub-panel" expandable>
-            <td colspan="4">
-              <div panel>
-                <div panel-container>
-                  <div>ugh</div>
-                  <div>ugh</div>
+      <rh-table>
+        <table>
+          <caption>
+            Concerts
+          </caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th id="concerts-date" scope="col" data-label="Date">Date</th>
+              <th id="concerts-event" scope="col" data-label="Event">Event<rh-sort-button></rh-sort-button></th>
+              <th id="concerts-venue" scope="col" data-label="Venue">Venue<rh-sort-button></rh-sort-button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr tabindex="0" aria-expanded="true" aria-controls="sub-panel">
+              <td headers="concerts-date" data-label="Date">12 February</td>
+              <td headers="concerts-event" data-label="Event">Waltz with Strauss</td>
+              <td headers="concerts-venue" data-label="Venue">Main Hall</td>
+            </tr>
+            <tr id="sub-panel" expandable>
+              <td colspan="3">
+                <div panel>
+                  <div panel-container>
+                    <div>ugh</div>
+                    <div>ugh</div>
+                  </div>
                 </div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td headers="concerts-date" data-label="Date">12 February</td>
-            <td headers="concerts-event" data-label="Event">Waltz with Strauss</td>
-            <td headers="concerts-venue" data-label="Venue">Main Hall</td>
-          </tr>
-          <tr>
-            <td headers="concerts-date" data-label="Date">24 March</td>
-            <td headers="concerts-event" data-label="Event">The Obelisks</td>
-            <td headers="concerts-venue" data-label="Venue">West Wing</td>
-          </tr>
-          <tr>
-            <td headers="concerts-date" data-label="Date">14 April</td>
-            <td headers="concerts-event" data-label="Event">The What</td>
-            <td headers="concerts-venue" data-label="Venue">Main Hall</td>
-          </tr>
-        </tbody>
-      </table>
-      <small slot="summary">Dates and venues subject to change.</small>
-    </rh-table>
-  `
+              </td>
+            </tr>
+            <tr>
+              <td headers="concerts-date" data-label="Date">12 February</td>
+              <td headers="concerts-event" data-label="Event">Waltz with Strauss</td>
+              <td headers="concerts-venue" data-label="Venue">Main Hall</td>
+            </tr>
+            <tr>
+              <td headers="concerts-date" data-label="Date">24 March</td>
+              <td headers="concerts-event" data-label="Event">The Obelisks</td>
+              <td headers="concerts-venue" data-label="Venue">West Wing</td>
+            </tr>
+            <tr>
+              <td headers="concerts-date" data-label="Date">14 April</td>
+              <td headers="concerts-event" data-label="Event">The What</td>
+              <td headers="concerts-venue" data-label="Venue">Main Hall</td>
+            </tr>
+          </tbody>
+        </table>
+        <small slot="summary">Dates and venues subject to change.</small>
+      </rh-table>
+    `
   }
 }
 

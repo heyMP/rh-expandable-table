@@ -1,10 +1,9 @@
 import { ReactiveController, ReactiveElement } from 'lit';
 import styles from './styles.css?raw';
-import viewTransitions from './view-transitions.css?raw';
 
 function convertToCssStylesheet(css: string): CSSStyleSheet {
   const styles = new CSSStyleSheet();
-  styles.replaceSync(css);
+  styles.replace(css);
   return styles;
 }
 
@@ -16,15 +15,14 @@ export class ExpandableTableController implements ReactiveController {
   }
 
   hostUpdated() {
+    // only init on initial render
+    if (this.host.hasUpdated) return;
     this.init();
   }
 
   async init() {
     if (!this.host.shadowRoot) return;
-    if (this.host.hasUpdated) return;
     this.attachExpandableRow();
-    // attach view transitions
-    document.adoptedStyleSheets = [...document.adoptedStyleSheets, convertToCssStylesheet(viewTransitions)];
     // attach shadowRoot styles
     this.host.shadowRoot.adoptedStyleSheets = [...this.host.shadowRoot.adoptedStyleSheets, convertToCssStylesheet(styles)];
   }
